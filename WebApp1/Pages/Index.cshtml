@@ -1,0 +1,56 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>Gestore <b>Modelli</b></h2>
+                    </div>
+                    <div class="col-sm-6">
+                        <a asp-page="./Create" class="btn btn-primary"><i class="material-icons">&#xE147;</i> <span>Aggiungi Nuovo Modello</span></a>
+
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+
+                        <th>pkModello</th>
+                        <th>Nome</th>
+                        <th>Data di nascita</th>
+                        <th>Nazionalità</th>
+                        <th>email </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var modello in Model.Modelli)
+                    {
+                        <tr>
+                            <td>@modello.pkModello</td>
+                            <td>@modello.NomeModello</td>
+                            <td>@modello.DataNascita</td>
+                            <td>@modello.NazioneModello</td>
+                            <td>@modello.emailModello</td>
+
+                            <td>
+                                <form method="post" action="">
+
+                                    <a asp-page="./Edit" asp-route-id="@modello.pkModello" class="edit"><i class="material-icons" title="Edit">&#xE254</i></a>
+                                    <button type="submit" asp-page-handler="delete" asp-route-id="@modello.pkModello"><i style="color:red;" class="material-icons" data-toggle="tooltip" title="Delete">&#xE872</i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
