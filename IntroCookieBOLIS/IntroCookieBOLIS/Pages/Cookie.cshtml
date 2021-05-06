@@ -1,0 +1,28 @@
+﻿@page
+@model IntroCookieBOLIS.Pages.CookieModel
+@{
+
+    if (Model.display)
+    {
+        <form id="formColore" method="post">
+            <h4>Seleziona il Colore <select class="target" asp-for="@Model.SelectedColor" asp-items="@Model.Colors"> </select></h4>
+        </form>
+
+
+
+
+<script>
+            $(".target").change(function () {
+                $("#formColore").submit();
+                console.log("Submit eseguito.")
+            });
+        </script>
+    }
+    else
+    {
+                <style> body {
+    background-color: @Model.SelectedColor}
+    </style>
+            }
+
+}
