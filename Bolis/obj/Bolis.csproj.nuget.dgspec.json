@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Bolis\\Bolis.csproj": {}
+    "C:\\Users\\hp\\source\\repos\\VerificaIdentityRuoli\\Bolis\\Bolis.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Bolis\\Bolis.csproj": {
+    "C:\\Users\\hp\\source\\repos\\VerificaIdentityRuoli\\Bolis\\Bolis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Bolis\\Bolis.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\VerificaIdentityRuoli\\Bolis\\Bolis.csproj",
         "projectName": "Bolis",
-        "projectPath": "C:\\Users\\hp\\Bolis\\Bolis.csproj",
+        "projectPath": "C:\\Users\\hp\\source\\repos\\VerificaIdentityRuoli\\Bolis\\Bolis.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Bolis\\obj\\",
+        "outputPath": "C:\\Users\\hp\\source\\repos\\VerificaIdentityRuoli\\Bolis\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

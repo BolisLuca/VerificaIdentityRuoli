@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6KDiUzPLzy13jj7r2CVf8qEWgHU9gRFvkU5CH1oBP6o3toDf1vk4sGjaIdSV9cfkAxzvnavsJn5bKJOJ2p+i7w==",
+  "dgSpecHash": "jSz3uiWx04L9MZ/J6rFO92NUKZJzs5++Kui5KjTIWCNxGnJoGdADaTc1o811+CPVI0XT9Qp5DB2Iyn7E3pdfxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hp\\source\\repos\\WebApp1\\WebApp1.csproj",
+  "projectFilePath": "C:\\Users\\hp\\source\\repos\\VerificaIdentityRuoli\\WebApp1\\WebApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.4\\microsoft.aspnetcore.cryptography.internal.5.0.4.nupkg.sha512",

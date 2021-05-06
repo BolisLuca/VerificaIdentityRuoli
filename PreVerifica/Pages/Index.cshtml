@@ -1,0 +1,61 @@
+﻿@page
+@model PreVerifica.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Automobili[0].NomeModello)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Automobili[0].Descrizione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Automobili[0].cavalli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Automobili[0].data_di_produzione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Automobili[0].fkUserName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Automobili) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeModello)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descrizione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cavalli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.data_di_produzione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fkUserName)
+            </td>
+            <td>
+                @if (User.IsInRole("Admin") || User.IsInRole("Salesman"))
+                {
+                    <a asp-page="./Edit" asp-route-id="@item.PkId">Edit</a>  <a asp-page="./Delete" asp-route-id="@item.PkId">Delete</a>
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,59 @@
+﻿@page
+@model PreVerifica.Pages.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Automobile</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Automobile.PkId" class="control-label"></label>
+                <input asp-for="Automobile.PkId" class="form-control" />
+                <span asp-validation-for="Automobile.PkId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Automobile.NomeModello" class="control-label"></label>
+                <input asp-for="Automobile.NomeModello" class="form-control" />
+                <span asp-validation-for="Automobile.NomeModello" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Automobile.Descrizione" class="control-label"></label>
+                <input asp-for="Automobile.Descrizione" class="form-control" />
+                <span asp-validation-for="Automobile.Descrizione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Automobile.cavalli" class="control-label"></label>
+                <input asp-for="Automobile.cavalli" class="form-control" />
+                <span asp-validation-for="Automobile.cavalli" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Automobile.data_di_produzione" class="control-label"></label>
+                <input asp-for="Automobile.data_di_produzione" class="form-control" />
+                <span asp-validation-for="Automobile.data_di_produzione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Automobile.fkUserName" class="control-label"></label>
+                <input asp-for="Automobile.fkUserName" class="form-control" />
+                <span asp-validation-for="Automobile.fkUserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
