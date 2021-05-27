@@ -1,0 +1,125 @@
+﻿@page
+@model Bolis.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<form method="POST" action="" id="FormFiltri">
+    <h3> Filtri:</h3> 
+    <label>Marca</label>
+    <select asp-for="MarcaSelezionata" asp-items="Model.Marche" id="selectMarca"></select>
+    <label>Fascia di Prezzo: </label>
+        <select asp-for="fasciadiprezzoselezionata" asp-items="Model.FasceDiPrezzo" id="selectFasciaDiPrezzo"></select>
+    
+</form>
+<script>
+    $("#selectMarca").change(function () {
+        $("#FormFiltri").submit();
+    })
+    $("#selectFasciaDiPrezzo").change(function () {
+        $("#FormFiltri").submit();
+    })
+</script>
+<p>
+    <a asp-page="Create">Aggiungi</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Marca
+            </th>
+            <th>
+                Modello
+            </th>
+            <th>
+               Batteria
+            </th>
+            <th>
+              RAM
+            </th>
+            <th>
+                Mp_Fotocamera_anteriore
+            </th>
+            <th>
+                Mp_Fotocamera_posteriore
+            </th>
+            <th>
+                Pollici_display
+            </th>
+            <th>
+               tipoDisplay
+            </th>
+            <th>
+                Prezzo_di_acquisto
+            </th>
+            <th>
+                Prezzo_di_vendita
+            </th>
+            <th>
+                Quantità
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Telefoni) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modello)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Batteria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RAM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mp_Fotocamera_anteriore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mp_Fotocamera_posteriore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pollici_display)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipoDisplay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prezzo_di_acquisto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prezzo_di_vendita)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantità)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Serial_number">Edit</a> <a asp-page="./Delete" asp-route-id="@item.Serial_number">Delete</a>
+
+                @*@if (User.IsInRole("Admin"))
+        {
+            <a asp-page="./Edit" asp-route-id="@item.Serial_number">Edit</a> <a asp-page="./Delete" asp-route-id="@item.Serial_number">Delete</a>
+        }
+        else
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                <a asp-page="./Edit" asp-route-id="@item.Serial_number">Edit</a>
+            }
+        }*@
+
+
+                
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
